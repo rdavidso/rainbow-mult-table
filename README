@@ -1,0 +1,3 @@
+This program takes a few optional arguments with noted defaults:
+
+node index.js [size=10] [rowOffset=] [colOffset=0] [variablePadding=0]

@@ -1,0 +1,14 @@
+{
+  "name": "rainbow-mult-table",
+  "version": "1.0.0",
+  "description": "Color printing of multiplication tables based on leading digit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ross Davidson",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "ansi-256-colors": "^1.1.0"
+  }
+}
