@@ -9,6 +9,7 @@
   "author": "Ross Davidson",
   "license": "GPL-3.0",
   "dependencies": {
-    "ansi-256-colors": "^1.1.0"
+    "ansi-256-colors": "^1.1.0",
+    "commander": "^2.8.1"
   }
 }

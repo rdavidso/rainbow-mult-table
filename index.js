@@ -1,4 +1,6 @@
-var ansi = require('ansi-256-colors');
+var ansi = require('ansi-256-colors')
+  , program = require('commander')
+  ;
 
 //              0  1  2  3  4  5   6   7  8   9 10  11
 //var colors = [5, 4, 7, 8, 3, 9, 10, 11, 2, 12, 6, 13];
@@ -8,10 +10,6 @@ var order = [0, 5, 7, 6, 8, 10, 9, 1, 0, 11];
 
 
 function mult(size, x, y, variablePadding) {
-    size = parseInt(size || 10);
-    x = parseInt(x || 0);
-    y = parseInt(y || 0);
-    variablePadding = parseInt(variablePadding || 0);
     var sx = x + size;
     var sy = y + size;
     var pad = ("" + sx * sy).length;
@@ -47,4 +45,12 @@ function padding(pad, num) {
     return colorNumStr;
 }
 
-mult.apply(null, process.argv.slice(2));
+program
+.version('1.0.0')
+.option('-s, --size [n]', 'Print a multiplication table [n] * [n]', parseInt, 10)
+.option('-r, --row-offset [offset]', 'Start your rows at 0 plus [offset]', parseInt, 0)
+.option('-c, --col-offset [offset]', 'Start your cols at 0 plus [offset]', parseInt, 0)
+.option('-p, --variable-padding', 'Enable minimal variable width padding.')
+.parse(process.argv);
+
+mult(program.size, program.rowOffset, program.colOffset, program.variablePadding);

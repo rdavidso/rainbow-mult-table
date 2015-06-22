@@ -1,3 +1,12 @@
-This program takes a few optional arguments with noted defaults:
 
-node index.js [size=10] [rowOffset=] [colOffset=0] [variablePadding=0]
+  Usage: rainbow-mult-table [options]
+
+  Options:
+
+    -h, --help                 output usage information
+    -V, --version              output the version number
+    -s, --size [n]             Print a multiplication table [n] * [n]
+    -r, --row-offset [offset]  Start your rows at 0 plus [offset]
+    -c, --col-offset [offset]  Start your cols at 0 plus [offset]
+    -p, --variable-padding     Enable minimal variable width padding.
+
